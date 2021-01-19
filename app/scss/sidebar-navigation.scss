@@ -1,0 +1,31 @@
+.sidebar-navigation {
+  padding: 20px 0;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  background-color: #ffffff;
+
+  &__item {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    width: 100%;
+    padding: 0 17px;
+    font-weight: 700;
+    border-left: 2px solid transparent;
+    transition: border-color 300ms;
+
+    &:hover {
+      border-color: $color-main;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar-navigation {
+    display: none;
+  }
+}

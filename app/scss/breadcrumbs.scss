@@ -1,0 +1,30 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item {
+    position: relative;
+    margin-right: 13px;
+    font-size: 13px;
+
+    &::after {
+      content: '/';
+      position: absolute;
+      top: 50%;
+      right: -11px;
+      transform: translateY(-50%);
+      color: $color-dark;
+    }
+    &:last-child {
+      margin-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    font-size: 13px;
+  }
+}

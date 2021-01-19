@@ -1,0 +1,40 @@
+.back-to {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 43px;
+  font-weight: 700;
+
+  &:hover .back-to__arrow {
+    border-color: $color-main;
+
+    svg path {
+      stroke: $color-main;
+    }
+  }
+  &__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    transition: border-color 300ms;
+
+    svg path {
+      transition: stroke 300ms;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .back-to {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .back-to {
+    margin-bottom: 0;
+  }
+}

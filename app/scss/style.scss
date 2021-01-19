@@ -1,0 +1,81 @@
+@import '../fonts/index.css';
+@import './general.scss';
+
+@import './burger.scss';
+@import './breadcrumbs.scss';
+@import './navigation.scss';
+@import './sidebar-navigation.scss';
+@import './back-to.scss';
+@import './setting-block.scss';
+@import './button.scss';
+@import './notify.scss';
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 10px 40px;
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+
+    &-avatar {
+      width: 40px;
+      height: 40px;
+    }
+    &-info {
+      display: none;
+      padding-left: 16px;
+    }
+    &-name {
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    &-link {
+      color: $color-main;
+      font-weight: 700;
+    }
+  }
+}
+@media screen and (max-width: 1260px) {
+  .header {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+/* Logo */
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Access site */
+
+.access-site {
+  
+  &__breadcrumbs {
+    margin-bottom: 8px;
+  }
+  &__title {
+    margin-bottom: 49px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .access-site {
+
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+}

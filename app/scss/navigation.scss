@@ -1,0 +1,31 @@
+.navigation {
+  
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+  }
+  &__item {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+      margin-left: 38px;
+    }
+  }
+  &__link {
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navigation {
+
+    &__item {
+
+      &:last-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

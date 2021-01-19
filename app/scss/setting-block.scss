@@ -1,0 +1,128 @@
+.setting-block {
+  padding: 20px 20px 23px;
+  border: 1px solid $color-border;
+  border-radius: 20px;
+  background-color: #ffffff;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    margin-top: 4px;
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  &__descr {
+    margin-bottom: 39px;
+    color: $color-grey;
+    font-weight: 500;
+  }
+  &__text {
+    line-height: 1.5;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 294px 1fr;
+    grid-column-gap: 37px;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+    padding-left: 32px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__caption {
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  &__input-radio {
+    display: none;
+
+    &:checked + .setting-block__radio-box::before {
+      opacity: 1;
+    }
+  }
+  &__radio-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $color-border;
+    border-radius: 50%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+      border-radius: 50%;
+      background-color: $color-main;
+      opacity: 0;
+      transition: opacity 300ms;
+    }
+  }
+  &__hidden-section {
+    display: none;
+    margin-top: 20px;
+  }
+  &__field {
+    display: flex;
+    flex-direction: column;
+  }
+  &__label {
+    font-size: 13px;
+  }
+  &__input {
+    height: 38px;
+    border: 0;
+    border-bottom: 1px solid $color-border;
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 40px;
+  }
+  &__button {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .setting-block {
+
+    &__content {
+      grid-template-columns: 180px 1fr;
+      grid-column-gap: 20px;
+    }
+  } 
+}
+@media screen and (max-width: 991px) {
+  .setting-block {
+
+    &__subtitle {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    &__content {
+      grid-template-columns: 1fr;
+    }
+  } 
+}
