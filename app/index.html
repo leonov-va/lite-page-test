@@ -12,28 +12,12 @@
 
 <body>
 
-  <!-- Demands -->
-
-  <!-- <ul>
-    <li>Для подтверждения части навыков предлагаем выполнить небольшое тестовое задание - верстка макета страницы ЛК.</li>
-    <li><b>Верстка адаптив, На разрешение > 1280 фикс контейнер 1200, от 360 до 1280 на ваше усмотрение, < 360 - мобильная версия.</b></li>
-    <li>Ссылка на макет: https://www.figma.com/file/hjS0gWIXmaUFtYU1RRQjyM/Test-01</li>
-    <li>
-      Обязательно замерьте время выполнения задания.
-      <ul>
-        <li>14:40 - </li>
-      </ul>
-    </li>
-    <li><b>Срок выполнения - до 21 января 20-00.</b></li>
-  </ul> -->
-
   <!-- Header -->
 
   <header class="header">
     <!-- Logo -->
-
     <a href="#" class="logo">lite.page</a>
-
+    
     <div class="header__content">
 
       <!-- Navigation -->
@@ -72,10 +56,10 @@
           <a href="#" class="header__user-link">Выйти</a>
         </div>
       </div>
-
-      <!-- Burger -->
-      <div class="burger js-burger"><span></span></div>
     </div>
+
+    <!-- Burger -->
+    <div class="burger js-burger"><span></span></div>
   </header>
   
   <!-- Main -->
@@ -172,7 +156,7 @@
                     <input class="setting-block__input-radio js-access-setting" type="radio" name="type" hidden>
                     <span class="setting-block__radio-box"></span>
                     <span class="setting-block__caption">Опубликовать сайт</span>
-                    <span class="setting-block__text">Доступно при оплаченном тарифном плане  и купленном домене</span>
+                    <span class="setting-block__text">Доступно при оплаченном тарифном плане и купленном домене</span>
                   </label>
                   <label class="setting-block__item">
                     <input class="setting-block__input-radio js-access-setting" type="radio" name="type" hidden>
@@ -182,7 +166,7 @@
                     <div class="setting-block__hidden-section">
                       <div class="setting-block__field">
                         <label class="setting-block__label" for="password">Введите пароль</label>
-                        <input class="setting-block__input" id="password" type="password" name="password" placeholder="******">
+                        <input class="setting-block__input" id="password" type="password" name="password" placeholder="******" autocomplete="on">
                       </div>
                     </div>
                   </label>
@@ -195,7 +179,7 @@
                 </div>
               </div>
               <div class="setting-block__actions">
-                <button type="reset" class="setting-block__button button">Отменить</button>
+                <button type="reset" class="setting-block__button button js-reset-form">Отменить</button>
                 <button type="submit" class="setting-block__button button">Сохранить</button>
               </div>
             </form>
@@ -207,7 +191,7 @@
 
   <!-- Notify -->
 
-  <div class="notify">
+  <div class="notify js-notify-popup">
     <div class="notify__inner">
       <div class="notify__description">Настройки доступа к сайту успешно изменены</div>
       <svg class="notify__close js-close-notify" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">

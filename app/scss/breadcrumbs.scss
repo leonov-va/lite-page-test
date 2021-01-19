@@ -28,3 +28,11 @@
     font-size: 13px;
   }
 }
+@media screen and (max-width: 767px) {
+  .breadcrumbs {
+
+    &__item {
+      margin-right: 15px;
+    }
+  }
+}

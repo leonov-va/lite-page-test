@@ -10,10 +10,15 @@ $color-background: #fafafa;
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 button,
 input[type="submit"] {
   appearance: none;
   -webkit-appearance: none;
+  font: 400 15px 'Raleway', sans-serif;
 }
 
 button:focus {
@@ -25,8 +30,14 @@ button:focus {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   color: $color-dark;
   font: 400 15px 'Raleway', sans-serif;
+
+  &.overflow {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -90,8 +101,10 @@ ul {
   font-size: 20px;
 }
 
+/* Main */
+
 .main {
-  height: calc(100vh - 60px);
+  flex-grow: 1;
   background-color: $color-background;
 
   &__inner {
@@ -123,7 +136,7 @@ ul {
   .main {
 
     &__sidebar {
-      width: 280px;
+      width: 260px;
       margin-right: 20px;
     }
   }
@@ -138,7 +151,7 @@ ul {
     &__sidebar {
       width: 100%;
       margin-right: 0;
-      margin-bottom: 32px;
+      margin-bottom: 34px;
       padding-top: 0;
     }
     &__content {

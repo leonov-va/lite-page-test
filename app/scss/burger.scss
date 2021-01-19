@@ -36,10 +36,10 @@
     background: transparent;
 
     &:before {
-      transform: rotate(45deg) translate(6px, 5px);
+      transform: rotate(45deg) translate(30%, 4px);
     }
     &:after {
-      transform: rotate(-45deg) translate(4px, -3px);
+      transform: rotate(-45deg) translate(30%, -4px);
     }
   }
 }

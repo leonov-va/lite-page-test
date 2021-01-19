@@ -3,6 +3,7 @@
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
+  display: none;
   max-width: 600px;
   width: 100%;
   
@@ -19,6 +20,7 @@
     font-size: 13px;
   }
   &__close {
+    flex-shrink: 0;
     cursor: pointer;
   }
 }
