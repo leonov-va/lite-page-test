@@ -49,6 +49,9 @@ $(function () {
   function showSuccessNotify () {
     $('.js-notify-popup').fadeIn();
     resetForm();
+    setTimeout(function () {
+      $('.js-notify-popup').fadeOut();
+    }, 4000);
   }
   function resetForm () {
     $('.setting-block').get(0).reset();
