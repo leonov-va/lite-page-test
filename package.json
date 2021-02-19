@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "gulp build"
+  },
   "dependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "4.0.0",
@@ -10,5 +13,8 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "del": "^6.0.0"
   }
 }
