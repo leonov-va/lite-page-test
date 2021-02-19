@@ -14,7 +14,7 @@ const del = require('del');
 
 function html () {
   return src('src/**/*.html')
-    .pipe(dest('build'))
+    .pipe(dest('docs'))
 }
 
 
@@ -28,32 +28,32 @@ function style () {
       browsers: ['last 2 versions'],
       cascade: false
     }))
-    .pipe(dest('build/css'))
+    .pipe(dest('docs/css'))
     .pipe(browserSync.stream())
 }
 
 function js () {
   return src('src/js/main.js')
-    .pipe(dest('build/js'))
+    .pipe(dest('docs/js'))
 }
 
 function libsJS () {
   return src('src/libs/**/*')
-    .pipe(dest('build/libs'))
+    .pipe(dest('docs/libs'))
 }
 
 function images () {
   return src('src/images/*')
-    .pipe(dest('build/images'))
+    .pipe(dest('docs/images'))
 }
 
 function fonts () {
   return src('src/fonts/*')
-    .pipe(dest('build/fonts'))
+    .pipe(dest('docs/fonts'))
 }
 
 function clear () {
-  return del('build');
+  return del('docs');
 }
 
 // Watch
@@ -66,9 +66,9 @@ function watchFiles () {
     notify: false
   })
 
-  watch('app/*.html').on('change', browserSync.reload)
-  watch('app/scss/**/*.scss', style)
-  watch('app/js/**/*.js').on('change', browserSync.reload)
+  watch('src/*.html').on('change', browserSync.reload)
+  watch('src/scss/**/*.scss', style)
+  watch('src/js/**/*.js').on('change', browserSync.reload)
 }
 
 // Exports
