@@ -61,7 +61,7 @@ function clear () {
 function watchFiles () {
   browserSync.init({
     server: {
-      baseDir: 'app'
+      baseDir: 'src'
     },
     notify: false
   })
